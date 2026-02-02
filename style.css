@@ -153,3 +153,51 @@ footer {
   }
 }
 
+/*Terrarium Grid */
+.terrarium {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  justify-content: center;
+  align-items: stretch;
+  margin-top: var(--space-md);
+}
+
+.plant-card {
+  background-color: #e0f2fe;
+  padding: var(--space-md);
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Interaction States */
+
+/* Links */
+a:hover {
+  color: #1d4ed8;
+}
+
+a:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+/* Buttons */
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:focus {
+  outline: 3px solid #facc15; /* yellow */
+  outline-offset: 3px;
+}
+
+
+button:active {
+  transform: scale(0.97);
+}
