@@ -1,13 +1,18 @@
 :root {
-  --color-primary: #2563eb;     /* Blue */
-  --color-secondary: #475569;   /* Gray text */
-  --color-bg: #f8fafc;          /* Page background */
-  --color-sidebar: #e0e7ff;     /* Sidebar light blue */
-  --color-navbar: #ffffff;     /* Navbar white */
+  --color-primary: #2563eb;
+  --color-secondary: #475569;
+  --color-bg: #f8fafc;
+  --color-sidebar: #e0e7ff;
+  --color-navbar: #ffffff;
   --color-border: #c7d2fe;
 
   --font-base: 16px;
+
+  /* Spacing System */
+  --space-xs: 4px;
+  --space-sm: 10px;
   --space-md: 16px;
+  --space-lg: 24px;
 }
 
 body {
@@ -30,10 +35,10 @@ h1 {
 
 h2 {
   font-size: 22px;
-  margin-bottom: 8px;
+  margin-bottom: var(--space-sm);
 }
 
-/* Navbar - Flexbox */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -54,12 +59,9 @@ h2 {
   font-weight: 500;
 }
 
-.nav-center a:hover {
-  text-decoration: underline;
-}
-
+/* Button */
 .nav-right button {
-  padding: 6px 12px;
+  padding: var(--space-sm) var(--space-md); 
   background-color: var(--color-primary);
   color: white;
   border: none;
@@ -67,7 +69,7 @@ h2 {
   cursor: pointer;
 }
 
-/* Page Grid - CSS Grid */
+/* Page Grid */
 .page-grid {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -83,7 +85,7 @@ h2 {
   font-weight: 600;
 }
 
-/* Main content */
+/* Main */
 main {
   background-color: white;
   padding: var(--space-md);
@@ -94,22 +96,18 @@ section {
   margin-top: var(--space-md);
 }
 
-p, ul, ol, table {
-  max-width: 100%;
-}
-
 /* Table */
 table {
   border-collapse: collapse;
 }
 
+th, td {
+  padding: var(--space-sm); 
+}
+
 th {
   background-color: var(--color-primary);
   color: white;
-}
-
-th, td {
-  padding: 8px;
 }
 
 /* Media */
@@ -120,47 +118,17 @@ figure {
 
 /* Footer */
 footer {
-  text-align: center;
   padding: var(--space-md);
   color: #64748b;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-
-  /* Navbar */
-  .navbar {
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-
-  .nav-center {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Grid */
-  .page-grid {
-    grid-template-columns: 1fr;
-  }
-
-  main {
-    order: 1;
-  }
-
-  .sidebar {
-    order: 2;
-  }
-}
-
-/*Terrarium Grid */
+/* Terrarium */
 .terrarium {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-md);
   justify-content: center;
   align-items: stretch;
-  margin-top: var(--space-md);
 }
 
 .plant-card {
@@ -172,32 +140,58 @@ footer {
 }
 
 /* Interaction States */
-
-/* Links */
 a:hover {
   color: #1d4ed8;
 }
 
 a:focus {
-  outline: 2px solid #2563eb;
-  outline-offset: 2px;
+  outline: 2px solid var(--color-primary);
+  outline-offset: var(--space-xs); 
 }
 
 a:active {
   opacity: 0.7;
 }
 
-/* Buttons */
 button:hover {
   background-color: #1d4ed8;
 }
 
 button:focus {
-  outline: 3px solid #facc15; /* yellow */
-  outline-offset: 3px;
+  outline: 3px solid #facc15;
+  outline-offset: var(--space-sm); 
 }
-
 
 button:active {
   transform: scale(0.97);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .nav-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    order: 1;
+  }
+
+  .sidebar {
+    order: 2;
+  }
 }
