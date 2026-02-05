@@ -15,3 +15,27 @@ console.log("Age:", age);
 console.log("Is Student:", isStudent);
 console.log("Skills:", skills);
 console.log("Profile:", profile);
+
+// 1. greet function
+function greet(name) {
+  return "Hello " + name;
+}
+
+// 2. add function
+function add(a, b) {
+  return a + b;
+}
+
+// 3. toFahrenheit function
+function toFahrenheit(c) {
+  return (c * 9/5) + 32;
+}
+
+
+// Function calls 
+console.log(greet("Rishabh"));
+console.log("sum:",add(5, 10));
+console.log("Fahrenheit:",toFahrenheit(25));
+
+
+
