@@ -66,3 +66,26 @@ for (let i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
   }
 }
+
+
+// Select by ID
+let button = document.getElementById("mainBtn");
+
+// Select by Class
+let sidebar = document.getElementsByClassName("sidebar");
+
+// Select by Tag
+let paragraphs = document.getElementsByTagName("p");
+
+
+// Dynamic Update 
+
+button.addEventListener("click", function()
+ {   
+  // Change text of first paragraph
+  paragraphs[0].textContent = "Paragraph changed by JavaScript!";
+
+  // Change background color of sidebar
+  sidebar[0].style.backgroundColor = "lightgreen";
+
+});
