@@ -3,53 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Form</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+  }
+
+  header {
+    background-color: #6c9ecf;
+    padding: 20px 30px;
+  }
+
+  header h2 {
+    margin: 0;
+    color: #1f3c88;
+    letter-spacing: 1px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #0b2545;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  form {
+    padding: 30px;
+  }
+
+  label {
+    font-weight: 600;
+  }
+
+  input {
+    width: 250px;
+    padding: 6px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 8px 18px;
+    background-color: #3a6fd8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #2f5ec4;
+  }
+
+  footer {
+    background-color: #6c9ecf;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+</style>
+
 
 </head>
 <body>
-<header>
-  <h2>Contact Us</h2>
 
-  <nav role="navigation" aria-label="Main Navigation" >
+<header>
+  <h2>CONTACT</h2>
+
+   <nav role="navigation" aria-label="Main Navigation">
     <a href="./index.html">Back to Home</a><br>
     <a href="./pages/profile.html">Go to profile</a>
   </nav>
 </header>
 <br>
-  <form>
 
+<form id="contactForm">
 
-    <label for="name">Name:</label><br>
-    <input 
-      type="text" 
-      id="name" 
-      name="name" 
-      required 
-      minlength="3"
-    >
-    <br><br>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name">
+  <div id="nameError" style="color:red;"></div>
+  <br><br>
 
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email">
+  <div id="emailError" style="color:red;"></div>
+  <br><br>
 
-    <label for="email">Email:</label><br>
-    <input 
-      type="email" 
-      id="email" 
-      name="email" 
-      required
-    >
-    <br><br>
+  <button type="submit">Submit</button>
 
-   
-    <button type="submit">Submit</button>
+</form>
 
-  </form>
+<footer>
+  <p>Contact Page</p>
+</footer>
 
+<script>
+  let form = document.getElementById("contactForm");
+  let nameInput = document.getElementById("name");
+  let emailInput = document.getElementById("email");
+  let nameError = document.getElementById("nameError");
+  let emailError = document.getElementById("emailError");
 
-  <footer>
-    <p>Contact page</p>
-  </footer>
+  form.addEventListener("submit", function(event) {
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+
+    let isValid = true;
+
+    // Name empty check
+    if (nameInput.value.trim() === "") {
+      nameError.textContent = "Name is required";
+      isValid = false;
+    }
+
+    // Email empty check
+    if (emailInput.value.trim() === "") {
+      emailError.textContent = "Email is required";
+      isValid = false;
+    } 
+    // must contain @
+    else if (!emailInput.value.includes("@")) {
+      emailError.textContent = "Email must contain @";
+      isValid = false;
+    }
+
+    if (!isValid) {
+      event.preventDefault();
+    }
+
+  });
+</script>
 
 </body>
 </html>
-
-
-

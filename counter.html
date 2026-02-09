@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="count">0</h1>
+
+  <button id="increment">+</button>
+  <button id="decrement">-</button>
+  <button id="reset">Reset</button>
+
+  <script>
+    let count = 0;
+
+    let countDisplay = document.getElementById("count");
+    let incBtn = document.getElementById("increment");
+    let decBtn = document.getElementById("decrement");
+    let resetBtn = document.getElementById("reset");
+
+    incBtn.addEventListener("click", function() {
+      count++;
+      countDisplay.textContent = count;
+    });
+
+   decBtn.addEventListener("click", function() {
+  if (count > 0) {
+    count--;
+    countDisplay.textContent = count;
+  }
+});
+
+    resetBtn.addEventListener("click", function() {
+      count = 0;
+      countDisplay.textContent = count;
+    });
+  </script>
+
+</body>
+</html>
