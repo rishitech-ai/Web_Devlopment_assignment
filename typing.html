@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typing Test</title>
+
+  <style>
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+header {
+  background-color: #3a6fd8;
+  padding: 15px 30px;
+  color: white;
+  text-align: left;
+}
+
+header h2 {
+  margin: 0;
+  text-align: left;
+
+}
+
+nav {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;   /* Navbar center */
+  gap: 20px;                 /* spacing between links */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main container */
+.container {
+  flex: 1;                   /* pushes footer down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       
+  justify-content: center;   
+  padding: 40px;
+  text-align: center;
+}
+
+#sentence {
+  background-color: #e3f2fd;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+input {
+  margin-top: 15px;
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;       /* input aur button ke beech spacing */
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #3a6fd8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2f5ec4;
+}
+
+footer {
+  padding: 15px;
+  background-color: #3a6fd8;
+  color: white;
+  text-align: center;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Typing Test</h2>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./pages/profile.html">Profile</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <p id="sentence">Practice makes a person perfect.</p>
+
+    <div class="input-group">
+        <input type="text" id="typingInput" disabled>
+        <button id="startBtn">Start</button>
+    </div>
+
+    <h3>
+      Your Typed Text: 
+      <span id="liveText"></span>
+    </h3>
+
+  </div>
+
+  <footer>
+    <p>Typing Practice Page</p>
+  </footer>
+
+  <script>
+    let input = document.getElementById("typingInput");
+    let liveText = document.getElementById("liveText");
+    let startBtn = document.getElementById("startBtn");
+
+      input.disabled = false;
+      input.focus();
+    
+
+    input.addEventListener("input", function() {
+      liveText.textContent = input.value;
+    });
+  </script>
+
+</body>
+</html>
