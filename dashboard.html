@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Dashboard</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      background-color: #3a6fd8;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      flex: 1;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      width: 400px;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+
+    h2 {
+      color: #3a6fd8;
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    input {
+      padding: 8px;
+      width: 220px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 8px 20px;
+      background-color: #3a6fd8;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #2f5ec4;
+    }
+
+    footer {
+      background-color: #3a6fd8;
+      padding: 15px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Bank Dashboard</h1>
+
+    <nav>
+      <a href="../index.html">Go to Home</a>
+      <a href="../pages/profile.html">Go to Profile</a>
+      <a href="../contact.html">Go to Contact</a>
+      <a href="../counter.html">Go to Counter</a>
+      <a href="../typing.html">Go to Typing Test</a>
+      <a href="../click-game.html">Go to Click Game</a>
+      <a href="../login.html">Go to Login</a>
+    </nav>
+  </header>
+
+  <div class="container">
+  <div class="card">
+
+    <div class="section">
+      <h2>Current Balance</h2>
+      <p id="balance">₹6000</p>
+    </div>
+
+    <div class="section">
+      <h2>Deposit</h2>
+      <label>Amount:</label><br>
+      <input type="number" id="depositInput"><br>
+      <button id="depositBtn">Deposit</button>
+    </div>
+
+    <div class="section">
+      <h2>Withdraw</h2>
+      <label>Amount:</label><br>
+      <input type="number" id="withdrawInput"><br>
+      <button id="withdrawBtn">Withdraw</button>
+      <p id="error" style="color:red;"></p>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer>
+    Bank Dashboard Page
+  </footer>
+  <script src="./dashboard.js
+  "></script>
+
+</body>
+</html>  

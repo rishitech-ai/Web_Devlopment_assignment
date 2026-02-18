@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Click Game v2</title>
+  <title>Banking Login</title>
+
   <style>
     body {
       margin: 0;
@@ -17,23 +18,17 @@
       padding: 15px 30px;
       color: white;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       position: relative;
-      text-align: left;
-    }
-
-    header h2 {
-      margin: 0;
-      text-align: left;
     }
 
     nav {
-       display: flex;
-       gap: 20px;
-       position: absolute;
-       left: 50%;
-       transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
     }
 
     nav a {
@@ -49,60 +44,54 @@
     .container {
       flex: 1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      padding: 40px;
-      text-align: center;
+      align-items: center;
     }
 
-    #gameContainer {
-      width: 400px;
-      height: 400px;
-      border: 2px solid black;
-      position: relative;
-      background-color: #e3f2fd;
-      margin-bottom: 20px;
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
     }
 
-    .square {
-      width: 50px;
-      height: 50px;
-      background-color: red;
-      position: absolute;
-      cursor: pointer;
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
       border-radius: 4px;
     }
 
-    #scoreDisplay {
-      font-size: 24px;
-      font-weight: bold;
-      color: #3a6fd8;
-    }
-
-    #timerDisplay {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
     button {
-      padding: 8px 15px;
-      margin-top: 10px;
+      width: 100%;
+      padding: 8px;
+      background-color: #3a6fd8;
+      color: white;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
     }
 
+    button:hover {
+      background-color: #2f5ec4;
+    }
+
     footer {
-      padding: 15px;
       background-color: #3a6fd8;
       color: white;
       text-align: center;
+      padding: 15px;
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <h2>Click Game v2</h2>
+    <h2>Bank Login</h2>
     <nav>
       <a href="./index.html">Home</a>
       <a href="./pages/profile.html">Profile</a>
@@ -110,24 +99,27 @@
       <a href="../counter.html">Go to Counter</a>
       <a href="../typing.html">Go to Typing Test</a>
       <a href="../click-game.html">Go to Click Game</a>
-      <a href="../login.html">Go to Login</a>
       <a href="./dashboard.html">Go to Banking dashboard</a>
-
     </nav>
   </header>
 
   <div class="container">
-    <div id="timerDisplay">Time: 30</div>  
-    <div id="gameContainer"></div>
-    <div id="scoreDisplay">Score: 0</div>
-    <button id="startBtn">Start Game</button>
-    <button id="restartBtn">Restart Game</button> 
+    <div class="form-box">
+      <form>
+        <label>Username</label>
+        <input type="text">
+
+        <label>Password</label>
+        <input type="password">
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
   </div>
 
   <footer>
-    <p>Click Game Practice Page</p>
+    <p>Banking Simulator</p>
   </footer>
 
-  <script src="click-game.js"></script>
 </body>
 </html>
