@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Click Game v2</title>
   <style>
@@ -29,11 +30,11 @@
     }
 
     nav {
-       display: flex;
-       gap: 20px;
-       position: absolute;
-       left: 50%;
-       transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     nav a {
@@ -99,6 +100,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -106,22 +108,21 @@
     <nav>
       <a href="./index.html">Home</a>
       <a href="./pages/profile.html">Profile</a>
-      <a href="./contact.html">Contact</a>
-      <a href="../counter.html">Go to Counter</a>
-      <a href="../typing.html">Go to Typing Test</a>
-      <a href="../click-game.html">Go to Click Game</a>
-      <a href="../login.html">Go to Login</a>
+      <a href="contact.html">Go to contact</a>
+      <a href="counter.html">Go to Counter</a>
+      <a href="typing.html">Go to Typing Test</a>
+      <a href="login.html">Go to Login</a>
       <a href="./dashboard.html">Go to Banking dashboard</a>
 
     </nav>
   </header>
 
   <div class="container">
-    <div id="timerDisplay">Time: 30</div>  
+    <div id="timerDisplay">Time: 30</div>
     <div id="gameContainer"></div>
     <div id="scoreDisplay">Score: 0</div>
     <button id="startBtn">Start Game</button>
-    <button id="restartBtn">Restart Game</button> 
+    <button id="restartBtn">Restart Game</button>
   </div>
 
   <footer>
@@ -130,4 +131,5 @@
 
   <script src="click-game.js"></script>
 </body>
+
 </html>

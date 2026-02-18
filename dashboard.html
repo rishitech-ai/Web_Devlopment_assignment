@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bank Dashboard</title>
 
   <style>
@@ -59,7 +60,7 @@
       width: 400px;
       padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
@@ -109,39 +110,39 @@
     <nav>
       <a href="../index.html">Go to Home</a>
       <a href="../pages/profile.html">Go to Profile</a>
-      <a href="../contact.html">Go to Contact</a>
-      <a href="../counter.html">Go to Counter</a>
-      <a href="../typing.html">Go to Typing Test</a>
-      <a href="../click-game.html">Go to Click Game</a>
-      <a href="../login.html">Go to Login</a>
+      <a href="contact.html">Go to contact</a>
+      <a href="counter.html">Go to Counter</a>
+      <a href="typing.html">Go to Typing Test</a>
+      <a href="click-game.html">Go to Click Game</a>
+      <a href="login.html">Go to Login</a>
     </nav>
   </header>
 
   <div class="container">
-  <div class="card">
+    <div class="card">
 
-    <div class="section">
-      <h2>Current Balance</h2>
-      <p id="balance">₹6000</p>
+      <div class="section">
+        <h2>Current Balance</h2>
+        <p id="balance">₹6000</p>
+      </div>
+
+      <div class="section">
+        <h2>Deposit</h2>
+        <label>Amount:</label><br>
+        <input type="number" id="depositInput"><br>
+        <button id="depositBtn">Deposit</button>
+      </div>
+
+      <div class="section">
+        <h2>Withdraw</h2>
+        <label>Amount:</label><br>
+        <input type="number" id="withdrawInput"><br>
+        <button id="withdrawBtn">Withdraw</button>
+        <p id="error" style="color:red;"></p>
+      </div>
+
     </div>
-
-    <div class="section">
-      <h2>Deposit</h2>
-      <label>Amount:</label><br>
-      <input type="number" id="depositInput"><br>
-      <button id="depositBtn">Deposit</button>
-    </div>
-
-    <div class="section">
-      <h2>Withdraw</h2>
-      <label>Amount:</label><br>
-      <input type="number" id="withdrawInput"><br>
-      <button id="withdrawBtn">Withdraw</button>
-      <p id="error" style="color:red;"></p>
-    </div>
-
   </div>
-</div>
 
 
   <footer>
@@ -151,4 +152,5 @@
   "></script>
 
 </body>
-</html>  
+
+</html>

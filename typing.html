@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Typing Test</title>
   <style>
@@ -19,7 +20,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: relative;text-align: left;
+      position: relative;
+      text-align: left;
     }
 
     header h2 {
@@ -28,11 +30,11 @@
     }
 
     nav {
-       display: flex;
-       gap: 20px;
-       position: absolute;
-       left: 50%;
-       transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     nav a {
@@ -44,12 +46,14 @@
     nav a:hover {
       text-decoration: underline;
     }
-      h3 {
-       color: #ff4d4d;
+
+    h3 {
+      color: #ff4d4d;
     }
+
     #liveText {
-       color: green;
-       font-weight: bold;
+      color: green;
+      font-weight: bold;
     }
 
     .container {
@@ -105,6 +109,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -112,13 +117,11 @@
     <nav>
       <a href="./index.html">Home</a>
       <a href="./pages/profile.html">Profile</a>
-      <a href="./contact.html">Contact</a>
-      <a href="../counter.html">Go to Counter</a>
-      <a href="../typing.html">Go to Typing Test</a>
-      <a href="../click-game.html">Go to Click Game</a>
-      <a href="../login.html">Go to Login</a>
+      <a href="contact.html">Go to contact</a>
+      <a href="counter.html">Go to Counter</a>
+      <a href="click-game.html">Go to Click Game</a>
+      <a href="login.html">Go to Login</a>
       <a href="./dashboard.html">Go to Banking dashboard</a>
-
     </nav>
   </header>
 
@@ -131,7 +134,7 @@
     </div>
 
     <h3>
-      Your Typed Text: 
+      Your Typed Text:
       <span id="liveText"></span>
     </h3>
     <p id="timer">Time: 60</p>
@@ -147,4 +150,5 @@
   <!-- JS file link -->
   <script src="typing.js"></script>
 </body>
+
 </html>
