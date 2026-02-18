@@ -1,0 +1,281 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --light-blue: #a6d6f6;
+  --background: #f9fafb;
+  --card-bg: #ffffff;
+  --text-color: #1f2937;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--light-blue);
+  padding: var(--space-md);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* CENTER CONTENT*/
+
+.main-wrapper {
+  flex: 1;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+
+/* GRID LAYOUT (INDEX PAGE) */
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+  background: #f3f4f6;
+  padding: var(--space-md);
+  border-radius: var(--radius);
+}
+
+
+/* MAIN CONTENT COLUMN */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card {
+  background: var(--card-bg);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.center-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-card {
+  width: 100%;
+  max-width: 450px;
+}
+
+
+/* BUTTON STYLE */
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: var(--space-sm);
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+input {
+  width: 100%;
+  padding: var(--space-sm);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+label {
+  font-weight: 500;
+}
+
+
+/* TABLE STYLE */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-sm);
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: var(--space-sm);
+  text-align: center;
+}
+
+.table th {
+  background: #e0f2fe;
+}
+
+
+/* TERRARIUM GRID */
+
+.terrarium {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.plant {
+  background: #e0f2fe;
+  padding: var(--space-md);
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+
+/* CLICK GAME AREA */
+
+#gameArea {
+  width: 250px;
+  height: 250px;
+  background: #e5e7eb;
+  position: relative;
+  margin: var(--space-md) 0;
+  border-radius: var(--radius);
+}
+
+#square {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  position: absolute;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+
+/* TYPING PAGE TEXT */
+
+#sentence {
+  margin-bottom: var(--space-md);
+}
+
+#output {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* DASHBOARD STYLE */
+
+.balance-title {
+  color: var(--primary);   /* Blue color */
+}
+
+.balance-text {
+  color: var(--primary);   /* Blue color */
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.center-card label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.center-card input {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.center-card button {
+  display: block;      
+  width: 100%;         
+  margin-bottom: 15px;
+}
+
+.center-card button {
+  display: block;
+  width: 100px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: var(--space-md);
+  background: #8fc0d4;
+  margin-top: auto;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+}

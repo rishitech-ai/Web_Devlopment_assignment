@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Counter App</title>
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      margin-top: 100px;
-    }
-
-    h1 {
-      font-size: 60px;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      margin: 10px;
-      cursor: pointer;
-      
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <link rel="stylesheet" href="./counter.css">
 </head>
+
 <body>
-
-  <h1 id="count">0</h1>
-
-  <button id="increment">+</button>
-  <button id="decrement">-</button>
-  <button id="reset">Reset</button>
-
-  <script>
-    let count = 0;
-
-    let countDisplay = document.getElementById("count");
-    let incBtn = document.getElementById("increment");
-    let decBtn = document.getElementById("decrement");
-    let resetBtn = document.getElementById("reset");
-
-    incBtn.addEventListener("click", function() {
-      count++;
-      countDisplay.textContent = count;
-    });
-
-   decBtn.addEventListener("click", function() {
-  if (count > 0) {
-    count--;
-    countDisplay.textContent = count;
-  }
-});
-
-    resetBtn.addEventListener("click", function() {
-      count = 0;
-      countDisplay.textContent = count;
-    });
-  </script>
-
+  <header class="header">
+    <h1 class="logo">Counter App</h1>
+    <nav class="nav" role="navigation" aria-label="Main Navigation">
+      <a href="../index.html">Back to Home</a><br>
+      <a href="./pages/profile.html">Go to profile</a><br>
+      <a href="contact.html">Go to Contact</a><br>
+      <a href="typing.html">Go to Typing Test</a>
+      <a href="click-game.html">Go to Click Game</a>
+      <a href="login.html">Go to Login</a>
+      <a href="./dashboard.html">Go to Dashboard</a>
+    </nav>
+  </header>
+  <main class="main-wrapper center-page">
+    <div class="card center-card">
+      <h2 id="count">0</h2>
+      <button id="increase">Increase</button>
+      <button id="decrease">Decrease</button>
+      <button id="reset">Reset</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>Counter App Page</p>
+  </footer>
 </body>
+
 </html>
+<script>
+  let count = 0;
+
+  // elements
+  let countDisplay = document.getElementById("count");
+  let incBtn = document.getElementById("increase");
+  let decBtn = document.getElementById("decrease");
+  let resetBtn = document.getElementById("reset");
+
+  // increase
+  incBtn.addEventListener("click", function () {
+    count++;
+    countDisplay.textContent = count;
+  });
+
+  // decrease
+  decBtn.addEventListener("click", function () {
+    if (count > 0) {
+      count--;
+      countDisplay.textContent = count;
+    }
+  });
+
+  // reset
+  resetBtn.addEventListener("click", function () {
+    count = 0;
+    countDisplay.textContent = count;
+  });
+</script>
+
+
+

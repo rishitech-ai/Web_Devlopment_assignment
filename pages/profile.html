@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Profile Page</title>
-</head>
-
-<body>
-
-  <header>
-    <h1>My Profile</h1>
-    <nav role="navigation" aria-label="Main Navigation">
-      <a href="../index.html">Back to Home</a>
-      <a href="contact.html">Go to contact</a>
-      <a href="counter.html">Go to Counter</a>
-      <a href="typing.html">Go to Typing Test</a>
-      <a href="click-game.html">Go to Click Game</a>
-      <a href="login.html">Go to Login</a>
-      <a href="./dashboard.html">Go to Banking dashboard</a>
-    </nav>
-  </header>
-
-  <main>
-    <p>Hello! My name is Rishabh Tiwari.</p>
-    <p>This page contains my profile information.</p>
-
-    <section>
-      <h2>Goals</h2>
-      <ul>
-        <li>Become a Web developer</li>
-        <li>Build real projects</li>
-        <li>Get a tech job</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>Profile Page</p>
-  </footer>
-
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+        <!-- Header with navigation -->
+        <header class="header">
+            <h1 class="logo">PROFILE</h1>
+            <nav class="nav" role="navigation" aria-label="Main Navigation">
+                <a href="../index.html">Back to Home</a><br>
+                <a href="../contact.html">Go to Contact</a><br>
+                <a href="../counter.html">Go to Counter</a>
+                <a href="../typing.html">Go to Typing Test</a>
+                <a href="../click-game.html">Go to Click Game</a>
+                <a href="../login.html">Go to Login</a>
+                <a href="../dashboard.html">Go to Dashboard</a>
+            </nav>
+        </header>
+        <!-- Main content of page -->
+        <main class="main-wrapper center-page">
+            <div class="card center-card">
+                <form id="contactForm">
+                    <label>Name</label>
+                    <input type="text" id="name" required minlength="3">
+                    <label>Email</label>
+                    <input type="email" id="email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Profile Page</p>
+        </footer>
+    </body>
 </html>
